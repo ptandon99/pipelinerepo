@@ -1,6 +1,6 @@
 # Declarative Syntax Basics
 ## Setup the Workshop Environment
-If you haven't already follow the instructions in [Setup.md](Setup.md) before continuing with this exercise.  The Setup lesson will provide the essentials necessary to complete the exercises in this workshop.
+If you haven't already, follow the instructions in [Setup.md](Setup.md) before continuing with this exercise.  The Setup lesson will provide the essentials necessary to complete the exercises in this workshop.
 
 ## Setup to use Blue Ocean Pipeline Editor
 Once you have completed the Setup exercise you will have your own Jenkins Master for the following exercises.  Ensure you are logged into the Jenkins cluster using the username/password you created during the Sign Up process.
