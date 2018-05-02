@@ -1,4 +1,6 @@
 # Declarative Syntax Basics
+## Setup the Workshop Environment
+If you haven't already follow the instructions in ([Setup.md](Setup.md)) before continuing with this exercise.  This lesson will provide the essentials necessary to complete the following Exercises.
 
 ## Setup to use Blue Ocean Pipeline Editor
 
