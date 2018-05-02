@@ -16,18 +16,18 @@ In this exercise we are going to update our pipeline to demonstrate how **[Check
 ```
 
 2. **Save & Run** your pipeline.
-3. When the `input` step from the **Testing** stage asks to **Deploy** or **Abort** - select **Abort**
-4. The UI to interact with a `checkpoint` is not availbe in Blue Ocean so you will need to exit to the classic Jenkins UI for the next step.
-5. When the job has completed running you will see a **Resume** icon in the build's **Stage View**. Clicking on the **Resume** icon gives you the ability to:
+3. The UI to interact with a `checkpoint` is not availbe in Blue Ocean so you will need to exit to the classic Jenkins UI for the next step.
+4. When the job has completed running you will see a **Resume** icon in the build's **Stage View**. Clicking on the **Resume** icon gives you the ability to:
   - * **Delete** - Delete the cached artifacts and configuration for that build;
   - * **Restart** - Restart the build from the checkpoint.
-6. Click **Restart** and your pipeline will run from your `checkpoint` forward - skipping over the **Say Hello** stage
-7. When the `input` step from the **Testing** stage asks to **Deploy** or **Abort** - select **Testing**
+5. Click **Restart** and your pipeline will run from your `checkpoint` forward - skipping over the **Say Hello** stage
 
 >**NOTE**: Deleting a checkpoint doesn't make the **Resume** icon vanish.
 
 ## Cross Team Collaboration
 In this exercise we are going to set-up two Pipeline jobs (using the Jenkins classic UI) that demonstrate CloudBee's Cross Team Collaboration feature. We will need two separate Pipelines - one that publishes an event - and another that is triggered by an event.
+
+>**NOTE**:  You may need to enable this feature on your master.  Navigate to the top level of your master, select "Manage Jenkins" and then "Configure Notification."  Select Enable and choose "Local only."  Then save.
 
 ### Master Events
 
@@ -98,10 +98,10 @@ In this exercise we will get an introduction to the [Jenkins Kubernetes plugin](
 ```
       stage('Testing') {
         parallel {
-          stage('Java 7') {
-            agent { label 'jdk7' }
+          stage('Java 9') {
+            agent { label 'jdk9' }
             steps {
-              container('maven') {
+              container('maven9') {
                 sh 'mvn -v'
               }
             }
@@ -109,7 +109,7 @@ In this exercise we will get an introduction to the [Jenkins Kubernetes plugin](
           stage('Java 8') {
             agent { label 'jdk8' }
             steps {
-              container('maven') {
+              container('maven8') {
                 sh 'mvn -v'
               }
             }
@@ -170,8 +170,8 @@ Once that repository is forked:
 5. Under **Pipeline** - **Definition** select **Pipeline script from SCM**
 6. Select **Git** from **SCM**
 7. In **Repository URL** enter: ```https://github.com/PipelineHandsOn/custom-marker-files```
-8. Select your credentials from the **Credentials** menu
-9. In **Script path** enter: ```Jenkins-pom```
+8. Leave credentials set to none.
+9. In **Script path** enter: ```Jenkinsfile-pom```
 10. Click on **Save**
 11. Click on **Scan Organization Now**
 
