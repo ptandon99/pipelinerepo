@@ -93,6 +93,8 @@ For the second part of **Cross Team Collaboration** we will create an event that
 
 In this exercise we will get an introduction to the [Jenkins Kubernetes plugin](https://github.com/jenkinsci/kubernetes-plugin) and use the `container` block to run a set of steps inside a Docker container set-up in a Jenkins Kubernetes Agent template. So far we have used different `labels` to specify different JDK versions. But now we want to use Maven and our Jenkins Administrator has confifured a Jenkins Kubernetes plugin template to include access to a maven container.
 
+>**NOTE**: The 'container' declaration does not currently work with the Blue Ocean Pipeline Editor. So the changes for this exercise will need to be done directly on your file in source control. See https://help.github.com/articles/editing-files-in-your-repository/ 
+
 1. Replace the **Testing** stage with the following stage:
 
 ```
@@ -118,7 +120,7 @@ In this exercise we will get an introduction to the [Jenkins Kubernetes plugin](
       }
 ```
 
-2. **Save & Run** your pipeline.
+2. Commit your change to the master branch.
 3. Compare the logs for the **Java 7** and **Jave 8** stages.
 
 ## GitHub Organization Project

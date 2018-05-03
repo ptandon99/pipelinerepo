@@ -36,6 +36,12 @@ In this exercise we are going to edit the Jenkinsfile file in the **development*
 
   - Add beforeAgent option for when - if true, when conditions will be evaluated before entering the agent.
 
+In order to complete the following exercise you will need to fork the following repository into the Github Organization you created in **[Setup - Create a GitHub Organization](./Setup.md#create-a-github-organization)**:
+
+* https://github.com/PipelineHandsOn/sample-rest-server
+
+After forking the repository, click "Scan Organization Now" in your Github organization project.  The new project should be discovered and will start building.
+
 1. Within your **sample-rest-server** project select the **development** branch from the **Branch** drop down menu
 2. Click on the **Jenkinsfile** in the file list
 3. Click on the **Edit this file** button (pencil)
@@ -59,7 +65,7 @@ In this exercise we are going to edit the Jenkinsfile file in the **development*
 
 ## PRs and Merging
 
-In this exercise we are going to edit the development branch's Jenkinsfile again but make our commit against a feature branch and user a pull request to merge the edits into our development branch.
+In this exercise we are going to edit the development branch's Jenkinsfile again but make our commit against a feature branch and use a pull request to merge the edits into our development branch.
 
 1. Click on the **Edit this file** button (pencil)
 2. Insert the following stage after the existing **build** stage:
@@ -88,7 +94,7 @@ Finally, we should merge our work into our master branch to verify that our chan
 1. Return back to your repository's main page where you will be on the master branch by default
 2. Click on **New pull request**
 3. Select your base fork (not the project we forked from)
-4. Compare **master** to **development**
+4. Compare **master** to **development** and resolve any conflicts.
 5. Click **View pull request**
 6. Click **Merge pull request**
 7. Click **Confirm merge**
@@ -97,11 +103,12 @@ Finally, we should merge our work into our master branch to verify that our chan
 
 ## Advanced Jenkins Kubernetes Agents
 
-In this exercise we will explore the [Jenkins Kubernetes plugin](https://github.com/jenkinsci/kubernetes-plugin) and will update a Jenkinsfile to use the `podTemplate` and `container` directives in your Declarative Pipeline. The plugin creates a [Kubernetes Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/) for each agent requested by a Jenkins job, with at least one Docker container running as the JNLP agent, and stops the pod and all containers after the build is complete (or after a set amount of time as is the case here).
+In this exercise we will explore the [Jenkins Kubernetes plugin](https://github.com/jenkinsci/kubernetes-plugin) and will create a new pipeline job to use the `podTemplate` and `container` directives in your Declarative Pipeline. The plugin creates a [Kubernetes Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/) for each agent requested by a Jenkins job, with at least one Docker container running as the JNLP agent, and stops the pod and all containers after the build is complete (or after a set amount of time as is the case here).
 
 >NOTE: The **Jenksin Kubernetes Plugin** is automatically installed and configured to provision dynamic ephemeral agents by CloudBees Jenkins Enterprise on Kubernetes. 
 
-1. Copy and paste the following code into the **Pipeline Script** text box near the bottom of the page:
+1. Create a "New Item" and give it a name like "Advanced K8s Example" - choose the Pipeline type click OK.
+2. Copy and paste the following code into the **Pipeline Script** text box near the bottom of the page:
 
 ```
 pipeline {
