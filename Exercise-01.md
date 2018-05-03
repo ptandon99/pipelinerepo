@@ -9,7 +9,7 @@ Once you have completed the Setup exercise you will have your own Jenkins Master
 
 We will setup the [Blue Ocean Pipeline Editor](https://jenkins.io/doc/book/blueocean/pipeline-editor/) so we can use the visual editor for many of following exercises:
 
-1. If not already in Blue Ocean, click on the **Open Blue Ocean** link in the left side navigation bar
+1. If not already in Blue Ocean, click on the **Open Blue Ocean** link in the left navigation bar
 2. Click on the **Create a new Pipeline** button (if you have already created a Pipeline, you will need to click the **New Pipeline** button in the upper right) <p><img src="img/1-0-create-a-new-pipeline.png" width=300/>
 3. Click on one of the options in the **Where do you store your code?** section (**GitHub** for this course) <p><img src="img/1-0-select-scm.png" width=300/>
 4. Enter your **GitHub token** (your GitHub Personal Access Token)
