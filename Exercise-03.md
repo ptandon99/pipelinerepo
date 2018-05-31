@@ -121,7 +121,7 @@ In this exercise we will get an introduction to the [Jenkins Kubernetes plugin](
 ```
 
 2. Commit your change to the master branch.
-3. Compare the logs for the **Java 7** and **Jave 8** stages.
+3. Compare the logs for the **Java 8** and **Java 9** stages.
 
 ## GitHub Organization Project
 
