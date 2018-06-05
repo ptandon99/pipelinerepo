@@ -100,18 +100,18 @@ In this exercise we will get an introduction to the [Jenkins Kubernetes plugin](
 ```
       stage('Testing') {
         parallel {
-          stage('Java 9') {
+          stage('Java 8') {
             agent { label 'jdk9' }
             steps {
-              container('maven9') {
+              container('maven8') {
                 sh 'mvn -v'
               }
             }
           }
-          stage('Java 8') {
+          stage('Java 9') {
             agent { label 'jdk8' }
             steps {
-              container('maven8') {
+              container('maven9') {
                 sh 'mvn -v'
               }
             }
@@ -119,7 +119,7 @@ In this exercise we will get an introduction to the [Jenkins Kubernetes plugin](
         }
       }
 ```
-
+  You see above that the `container` block runs all of the steps within that block in the specified container based on the **name** of the **Container Template** - so it doesn't matter what version of the JDK is running in the agent.
 2. Commit your change to the master branch.
 3. Compare the logs for the **Java 8** and **Java 9** stages.
 

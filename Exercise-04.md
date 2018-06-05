@@ -2,7 +2,9 @@
 
 ## Shared Libraries
 
-In this exercise we are going to add a stage to our pipeline that uses a **Shared Library** to import functionality that allows us to say 'hi'.
+In this exercise we are going to add a stage to our pipeline that uses a **Shared Library** to import functionality that allows us to say 'hi'. But first we are going to fork the Pipeline Shared Library from https://github.com/PipelineHandsOn/shared-libraries/ into the GitHub Organization you create for this workshop.
+
+Once you have forked the ***shared-libraries*** repository into your organization you will need to update the Shared Library configuration for your Team master.
 
 More information on using Shared Libraries is available here: https://jenkins.io/doc/book/pipeline/shared-libraries/
 
@@ -164,3 +166,4 @@ pipeline {
 }
 ```
 **Note:** In the above example you were able to execute a java command in the implicitly defined **jnlp** container in the Pod.  The JNLP container is a part of every Pod created by the Jenkins Kubernetes plugin.
+
