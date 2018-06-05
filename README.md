@@ -1,5 +1,7 @@
 # Introduction to Declarative Pipelines
 
+## https://github.com/cloudbees/intro-to-declarative-pipeline
+
 This repository contains the instructions and learning materials associated with a hands on training workshop called **Introduction to Declarative Pipelines** that is designed to teach the following key concepts:
 
   * What are Jenkins Pipelines and why should you use them?
