@@ -16,7 +16,7 @@ In this exercise we are going to update our pipeline to demonstrate how **[Check
 ```
 
 2. **Save & Run** your pipeline.
-3. The UI to interact with a `checkpoint` is not availbe in Blue Ocean so you will need to exit to the classic Jenkins UI for the next step.
+3. The UI to interact with a `checkpoint` is not availbe in Blue Ocean yet, so you will need to exit to the classic Jenkins UI for the next step.
 4. When the job has completed running you will see a **Resume** icon in the build's **Stage View**. Clicking on the **Resume** icon gives you the ability to:
   - * **Delete** - Delete the cached artifacts and configuration for that build;
   - * **Restart** - Restart the build from the checkpoint.
@@ -178,7 +178,7 @@ Once that repository is forked:
 10. Click on **Save**
 11. Click on **Scan Organization Now**
 
-When the scan is complete your **Github Organization** project should now have both the **sample-rest-server** project and the **maven-project**.
+When the scan is complete your **Github Organization** project should now have both the original [empty repository you created in setup](./Setup.md#create-an-empty-github-repository-for-your-first-example-pipeline) and the **maven-project**.
 
 ## Next Exercises
 You may move onto **[Distributed Pipelines with Pipeline As Code](./Exercise-04.md)** once your instructor tells you to.
