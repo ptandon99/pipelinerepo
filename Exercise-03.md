@@ -180,7 +180,7 @@ Once that repository is forked:
 
 When the scan is complete your **Github Organization** project should now have both the original [empty repository you created in setup](./Setup.md#create-an-empty-github-repository-for-your-first-example-pipeline) and the **maven-project**.
 
-> NOTE: The ***custom-marker-files*** repository does not get added to your **Github Organization** project since in doesn't contain a matching marker file: `Jenkinsfile` or `pom.xml`.
+> **NOTE:** The ***custom-marker-files*** repository does not get added to your **Github Organization** project since in doesn't contain a matching marker file: `Jenkinsfile` or `pom.xml`.
 
 ## Next Exercises
 You may move onto **[Distributed Pipelines with Pipeline As Code](./Exercise-04.md)** once your instructor tells you to.
