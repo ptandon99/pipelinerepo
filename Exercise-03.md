@@ -159,9 +159,10 @@ When the project was created it also should have created a webhook in Github. Ve
 
 In the following exercise we are going to demonstrate how you can use the **[Custom Marker feature](https://go.cloudbees.com/docs/cloudbees-documentation/cje-user-guide/#pipeline-custom-factories)** of CloudBees Jenkins Enterprise to assign pipeline to a job based on an arbitrary file name like pom.xml.
 
-In order to complete the following exercise you will need to fork the following repository into the Github Organization you created in **[Setup - Create a GitHub Organization](./Setup.md#create-a-github-organization)**:
+In order to complete the following exercise you will need to fork the following repositories into the Github Organization you created in **[Setup - Create a GitHub Organization](./Setup.md#create-a-github-organization)**:
 
 * https://github.com/PipelineHandsOn/maven-project
+* https://github.com/PipelineHandsOn/custom-marker-files
 
 Once that repository is forked:
 
@@ -171,8 +172,8 @@ Once that repository is forked:
 4. In **Marker file** type ```pom.xml```
 5. Under **Pipeline** - **Definition** select **Pipeline script from SCM**
 6. Select **Git** from **SCM**
-7. In **Repository URL** enter: ```https://github.com/PipelineHandsOn/custom-marker-files```
-8. Leave credentials set to none.
+7. In **Repository URL** enter: ```https://github.com/{your_org_name}/custom-marker-files```
+8. Select the credentials you created in the previous exercise.
 9. In **Script path** enter: ```Jenkinsfile-pom```
 10. Click on **Save**
 11. Click on **Scan Organization Now**
