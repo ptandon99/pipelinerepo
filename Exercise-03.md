@@ -4,7 +4,7 @@
 
 In this exercise we are going to update our pipeline to demonstrate how **[Checkpoints](https://go.cloudbees.com/docs/cloudbees-documentation/cje-user-guide/#workflow-sect-checkpoint)** work and how end users can interact with Checkpoints once a job as been built. 
 
-1. Add the following stage before `stage('Testing')`:
+1. Add the following stage after `stage('Testing')`:
 
 ```
       stage('Checkpoint') {
