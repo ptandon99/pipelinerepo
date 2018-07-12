@@ -6,5 +6,10 @@ pipeline {
         echo 'Hello World'
       }
     }
+    stage('newhello') {
+      steps {
+        echo 'new hello'
+      }
+    }
   }
 }
