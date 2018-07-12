@@ -19,9 +19,12 @@ pipeline {
         }
       }
     }
-    stage('newhello') {
+    stage('Deploy') {
+      input {
+        message 'Should we continue?'
+      }
       steps {
-        echo 'new hello'
+        echo 'Continuing with deployment'
       }
     }
   }
