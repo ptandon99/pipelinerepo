@@ -7,7 +7,7 @@ pipeline {
       parallel {
         stage('SayHello') {
           steps {
-            echo 'Hello World'
+            echo 'Hello ${MY_NAME}!'
           }
         }
         stage('java version') {
@@ -22,5 +22,8 @@ pipeline {
         echo 'new hello'
       }
     }
+  }
+  environment {
+    MY_NAME = 'Mary'
   }
 }
