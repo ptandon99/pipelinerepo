@@ -2,8 +2,17 @@ pipeline {
   agent any
   stages {
     stage('SayHello') {
-      steps {
-        echo 'Hello World'
+      parallel {
+        stage('SayHello') {
+          steps {
+            echo 'Hello World'
+          }
+        }
+        stage('java version') {
+          steps {
+            sh 'java --version'
+          }
+        }
       }
     }
     stage('newhello') {
