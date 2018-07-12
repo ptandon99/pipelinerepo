@@ -7,7 +7,7 @@ pipeline {
       parallel {
         stage('SayHello') {
           steps {
-            echo 'Hello ${MY_NAME}!'
+            echo "Hello ${MY_NAME}!"
           }
         }
         stage('java version') {
